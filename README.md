@@ -1,5 +1,9 @@
 # Develhope - Node.js Exercises
 
+### After the download you need to execute command "npm install"
+
+### For executing file you need to execute "node filename.js or filename.mjs"
+
 ## Create a sum script
 
 Create a script that outputs the total of 5 + 6 when you run it with Node.js.
