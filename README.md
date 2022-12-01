@@ -2,7 +2,7 @@
 
 ### After the download you need to execute command "npm install"
 
-### For executing file you need to execute "node filename.js //or in some cases//>> filename.mjs"
+### For executing file you need to execute "node filename.js or filename.mjs"
 
 ## Create a sum script
 
