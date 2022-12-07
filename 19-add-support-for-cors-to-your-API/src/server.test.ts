@@ -14,14 +14,18 @@ describe("GET /planets", () => {
                 name: "Mercury",
                 description: null,
                 diameter: 1234,
-                moons: 12
+                moons: 12,
+                createdAt: "2022-12-07T14:11:53.175Z",
+                updatedAt: "2022-12-07T14:11:10.978Z",
             },
             {
                 id: 2,
                 name: "Venus",
                 description: null,
                 diameter: 5678,
-                moons: 2
+                moons: 2,
+                createdAt: "2022-12-07T14:11:53.175Z",
+                updatedAt: "2022-12-07T14:11:27.819Z",
             },
         ];
 

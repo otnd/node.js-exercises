@@ -14,14 +14,18 @@ describe("GET /planets", () => {
                 name: "Mercury",
                 description: null,
                 diameter: 1234,
-                moons: 12
+                moons: 12,
+                createdAt: "2022-12-07T14:11:53.175Z",
+                updatedAt: "2022-12-07T14:11:10.978Z",
             },
             {
                 id: 2,
                 name: "Venus",
                 description: null,
                 diameter: 5678,
-                moons: 2
+                moons: 2,
+                createdAt: "2022-12-07T14:11:53.175Z",
+                updatedAt: "2022-12-07T14:11:27.819Z",
             },
         ];
 
@@ -31,8 +35,7 @@ describe("GET /planets", () => {
         const response = await request
             .get("/planets")
             .expect(200)
-            .expect("Content-Type", /application\/json/)
-            .expect("Access-ControlAllow-Origin", "http://localhost:8080");
+            .expect("Content-Type", /application\/json/);
 
         expect(response.body).toEqual(planets);
     });
@@ -45,7 +48,9 @@ describe("GET /planet/:id", () => {
             name: "Mercury",
             description: null,
             diameter: 1234,
-            moons: 12
+            moons: 12,
+            createdAt: "2022-12-07T14:11:53.175Z",
+            updatedAt: "2022-12-07T14:11:10.978Z",
         };
         //@ts-ignore
         prismaMock.planet.findUnique.mockResolvedValue(planet);
@@ -86,7 +91,9 @@ describe("POST /planets", () => {
             name: "Mercury",
             description: null,
             diameter: 1234,
-            moons: 12
+            moons: 12,
+            createdAt: "2022-12-07T14:11:53.175Z",
+            updatedAt: "2022-12-07T14:11:10.978Z",
         };
 
         //@ts-ignore
@@ -100,8 +107,7 @@ describe("POST /planets", () => {
                 moons: 12,
             })
             .expect(201)
-            .expect("Content-Type", /application\/json/)
-            .expect("Access-ControlAllow-Origin", "http://localhost:8080");
+            .expect("Content-Type", /application\/json/);
 
         expect(response.body).toEqual(planet);
     });
@@ -133,7 +139,9 @@ describe("PUT /planets/:id", () => {
             name: "Mercury",
             description: "Lovely planet",
             diameter: 1234,
-            moons: 12
+            moons: 12,
+            createdAt: "2022-12-07T14:26:10.745Z",
+            updatedAt: "2022-12-07T14:25:48.106Z",
         };
 
         //@ts-ignore
@@ -148,8 +156,7 @@ describe("PUT /planets/:id", () => {
                 moons: 12,
             })
             .expect(200)
-            .expect("Content-Type", /application\/json/)
-            .expect("Access-ControlAllow-Origin", "http://localhost:8080");
+            .expect("Content-Type", /application\/json/);
 
         expect(response.body).toEqual(planet);
     });
@@ -212,8 +219,7 @@ describe("DELETE/planet/:id", () => {
         const response = await request
             .delete("/planets/1")
             .expect(204)
-            .expect("Content-Type", /application\/json/)
-            .expect("Access-ControlAllow-Origin", "http://localhost:8080");
+            .expect("Content-Type", /application\/json/);
 
         expect(response.text).toEqual("");
     });

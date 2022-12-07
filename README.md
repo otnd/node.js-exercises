@@ -2,7 +2,7 @@
 
 ### After the download you need to select a folder and execute command "npm install"
 
-### For executing file you need to execute "tsc filename.ts"
+### For executing file you need to execute "npm run build" & "npm start"
 
 ## Retrieve all resources
 
